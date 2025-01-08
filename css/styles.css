@@ -214,7 +214,7 @@ body{
     height: 100%; /* Hauteur de la ligne */
   }
 
-  
+
 .container .text-left .text-right h3 {
 
     text-align: justify;
@@ -623,7 +623,6 @@ body{
 
         flex-direction: row; /* Ensure items are in a row */
 
-        height: 100vh; /* Maintain full height */
 
         padding: 0 10%; /* Maintain padding */
 
