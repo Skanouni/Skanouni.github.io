@@ -27,6 +27,7 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    
 }
 
 .logo{
@@ -54,6 +55,7 @@ body{
     display: flex;
     align-items: center;
     padding: 0 10%;
+
 }
 
 .home-content{
@@ -135,38 +137,64 @@ body{
 }
 
 
-
-
-#profil{
-    height: 100vh;
-    display: flex;
-    align-items: justify;
-    padding: 0 10%;
-    margin-bottom: 10%;
+* {
+    box-sizing: border-box;
 }
 
 
-.profil-content h3{
-    font-size: 32px;
+#profil {
+
+    height: auto; /* Allow height to adjust */
+
+    display: flex;
+
+    flex-direction: column; /* Stack items vertically */
+
+    align-items: center; /* Center items */
+
+    padding: 0 5%; /* Adjusted padding */
+
+    margin-top: 80px; /* Added margin to create space from #profil */
+
+}
+
+.profil-content h3 {
+
+    font-size: 28px; /* Adjusted for smaller screens */
+
     font-weight: 700;
+
     color: #1F2D5C;
+
     align-items: center;
+
 }
 
 
 .profil-content p {
-    font-size: 16px;
+
+    font-size: 14px; /* Adjusted for smaller screens */
+
     align-items: center;
-    margin: 20px 0 40px;
+
+    margin: 10px 0 20px; /* Adjusted margins */
+
 }
 
-.option{
-    padding : 0 32% ; 
+
+.option {
+
+    padding: 0 10%; /* Adjusted for smaller screens */
+
 }
+
 
 .btssio {
+
     text-align: center;
-    padding: 10%;
+
+    padding: 5%; /* Adjusted for smaller screens */
+
 }
 
 .container {
@@ -174,321 +202,582 @@ body{
     align-items: center;
   }
   
- .text-left, .text-right {
+  .text-left, .text-right {
     flex: 1;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
   }
   
   .separator {
-    width: 10px;
+    width: 1px;
     background-color: #000; /* Couleur de la ligne */
     height: 100%; /* Hauteur de la ligne */
   }
 
+  
 .container .text-left .text-right h3 {
+
     text-align: justify;
-    margin-left: 200px;
+
+    margin-left: 0; /* Removed left margin for smaller screens */
+
 }
 
-#parcours{
-    height: 50vh;
+
+#parcours {
+
+    height: auto; /* Allow height to adjust */
+
     display: flex;
+
+    flex-direction: column; /* Stack items vertically */
+
     align-items: center;
-    padding: 0 10%;
+
+    padding: 0 5%; /* Adjusted padding */
+
     margin-top: 25%;
+
 }
 
-.parcours-content h3{
-    font-size: 32px;
+
+.parcours-content h3 {
+
+    font-size: 28px; /* Adjusted for smaller screens */
+
     font-weight: 700;
+
     color: #1F2D5C;
+
     align-items: center;
+
 }
 
 
 .parcours-content p {
-    font-size: 16px;
-    margin: 30px 0 45px;
+
+    font-size: 14px; /* Adjusted for smaller screens */
+
+    margin: 20px 0 30px; /* Adjusted margins */
+
 }
 
+
 .timeline {
+
     font-family: Arial, sans-serif;
+
     line-height: 1.6;
+
     margin: 20px;
+
     padding: 0;
+
     border-left: 2px solid #ddd;
+
     position: relative;
-  }
-  
-  .timeline-item {
+
+}
+
+
+.timeline-item {
+
     position: relative;
-    margin: 20px 0 20px 20px;
+
+    margin: 20px 0;
+
     padding-left: 20px;
-  }
-  
-  .timeline-item::before {
+
+}
+
+
+.timeline-item::before {
+
     content: '';
+
     position: absolute;
+
     left: -8px;
+
     top: 0;
+
     width: 12px;
+
     height: 12px;
+
     background-color: #007BFF;
+
     border-radius: 50%;
+
     border: 2px solid #fff;
+
     box-shadow: 0 0 0 2px #007BFF;
-  }
-  
-  .timeline-item em {
+
+}
+
+
+.timeline-item em {
+
     font-style: italic;
+
     color: #555;
+
     font-size: 0.9em;
-  }
-  
-  .timeline-item h3 {
+
+}
+
+
+.timeline-item h3 {
+
     margin: 5px 0;
+
     font-size: 1.2em;
+
     color: #333;
-  }
-  
-  .timeline-item p {
+
+}
+
+
+.timeline-item p {
+
     margin: 5px 0;
+
     font-size: 0.95em;
+
     color: #666;
-  }
-  
-  .timeline-item ul {
+
+}
+
+
+.timeline-item ul {
+
     margin: 5px 0 0 15px;
+
     padding: 0;
+
     list-style-type: disc;
+
     color: #444;
-  }
-  
-  .timeline-item ul li {
+
+}
+
+
+.timeline-item ul li {
+
     margin: 3px 0;
-  }
-  
-  @media (max-width: 768px) {
-    .timeline {
-      border-left: none;
-    }
-  
-    .timeline-item {
-      margin-left: 0;
-      padding-left: 0;
-    }
-  
-    .timeline-item::before {
-      display: none;
-    }
-  }
 
-
-.timeline-content em{
-    margin-left: 100px;
-}
-
-.timeline-content h2{
-    margin-left: 100px;
-}
-
-.timeline-content strong{
-    margin-left: 100px;
 }
 
 
-.timeline-content p{
-    margin-left: 100px;
+.timeline-content em {
+
+    margin-left: 0; /* Adjusted for smaller screens */
+
 }
 
 
-* { box-sizing: border-box; }
+.timeline-content h2 {
 
-.timeline {
-  position: relative;
-  margin: 20px 0 40px;
-  padding: 40px 60px;
-  background: transparent;
-  overflow: auto;
-}
-.timeline:after {
-  content: "";
-  position: absolute;
-  margin: 0px 0 0px;
-  left: 20px;
-  right: 20px;
-  top: 50%;
-  height: 8px;
-  /* background: linear-gradient(to right,#64e664, #9198e5); */
-  border-radius: 3px;
-  z-index: 1;
-  transform: translateY(-50%);
-}
+    margin-left: 0; /* Adjusted for smaller screens */
 
-.timeline article {
-  display: inline-block;
-  position: relative;
-  background:transparent;
-  width: auto;
-  height: 70px;
-  padding: 10px;
-  margin: 0 0 50px 0;
-  vertical-align: top;
-}
-.timeline article:not(:first-child) {
-  margin-left: -20px;
-}
-.timeline article:not(:last-child) {
-  margin-right: -20px;
-}
-.timeline article:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: calc( 100% + 26px );
-  left: 50%;
-  background: #346abf;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-.timeline article:after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-left: 16px solid transparent;
-  border-right: 16px solid transparent;
-  border-top: 20px solid #eeeeee;
-  transform: translateX(-50%);
-}
-
-.timeline article:nth-child(even) {
-  margin-top: 140px;
-  margin-bottom: 0;
-}
-
-.timeline article:nth-child(even):before {
-  top: auto;
-  bottom: calc( 100% + 26px );
-}
-
-.timeline article:nth-child(even):after {
-  top: auto;
-  bottom: 100%;
-  border-left: 16px solid transparent;
-  border-right: 16px solid transparent;
-  border-bottom: 20px solid #eeeeee;
-  border-top: none;
 }
 
 
-.timeline article h2 {
-  font-size: 22px;
-  margin: 0;
+.timeline-content strong {
+
+    margin-left: 0; /* Adjusted for smaller screens */
+
 }
 
 
-#competence{
-    height: 100vh;
+.timeline-content p {
+
+    margin-left: 0; /* Adjusted for smaller screens */
+
+}
+
+
+#competence {
+
+    height: auto; /* Allow height to adjust */
+
     display: flex;
+
+    flex-direction: column; /* Stack items vertically */
+
     align-items: center;
-    padding: 0 10%;
+
+    padding: 0 5%; /* Adjusted padding */
+
     margin-top: 35%;
+
 }
 
 
-#competence-content h3{
-    font-size: 32px;
+#competence-content h3 {
+
+    font-size: 28px; /* Adjusted for smaller screens */
+
     font-weight: 700;
+
     color: #1F2D5C;
+
     align-items: center;
+
 }
 
 
-#competence-content p {
-    font-size: 16px;
-    margin: 20px 0 40px;
+#competence ```css
+
+-content p {
+
+    font-size: 14px; /* Adjusted for smaller screens */
+
+    margin: 10px 0 20px; /* Adjusted margins */
+
 }
 
 
 .tableau {
+
     display: inline-flex;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-    flex-direction: row; /* Définit l'alignement en rangée */
-    align-items: center; /* Centre les éléments sur l'axe vertical */
-    justify-content: center; /* Centre les éléments sur l'axe horizontal */
-    padding: 10% 10%;
+
+    flex-wrap: wrap; /* Allow items to wrap */
+
+    flex-direction: row; /* Keep items in a row */
+
+    align-items: center; /* Center items vertically */
+
+    justify-content: center; /* Center items horizontally */
+
+    padding: 5%; /* Adjusted for smaller screens */
+
 }
 
 
 #competence img {
-    margin: 15px;
-    width: 60%; /* Vous pouvez ajuster la taille selon vos besoins */
+
+    margin: 10px; /* Adjusted margin */
+
+    width: 80%; /* Adjusted size for smaller screens */
+
     height: auto;
+
     pointer-events: auto;
+
     z-index: 1;
+
 }
 
 
 #langages img {
-    margin: 15px;
-    width: 40%; /* Vous pouvez ajuster la taille selon vos besoins */
+
+    margin: 10px; /* Adjusted margin */
+
+    width: 80%; /* Adjusted size for smaller screens */
+
     height: auto;
+
     pointer-events: auto;
+
     z-index: 1;
+
 }
 
 
-#langages{
-    height: 100vh;
+#langages {
+
+    height: auto; /* Allow height to adjust */
+
     display: flex;
+
+    flex-direction: column; /* Stack items vertically */
+
     align-items: center;
-    padding: 0 10%;
+
+    padding: 0 5%; /* Adjusted padding */
+
     margin-top: 30%;
+
 }
 
 
-#langages-content h3{
-    font-size: 32px;
+#langages-content h3 {
+
+    font-size: 28px; /* Adjusted for smaller screens */
+
     font-weight: 700;
+
     color: #1F2D5C;
+
     align-items: center;
+
     margin-bottom: 10%;
+
 }
 
 
 #langages-content p {
-    font-size: 16px;
-    margin: 20px 0 40px;
+
+    font-size: 14px; /* Adjusted for smaller screens */
+
+    margin: 10px 0 20px; /* Adjusted margins */
+
 }
 
 
-#contact{
-    height: 100vh;
+#contact {
+
+    height: auto; /* Allow height to adjust */
+
     display: flex;
+
+    flex-direction: column; /* Stack items vertically */
+
     align-items: center;
-    padding: 0 10%;
+
+    padding: 0 5%; /* Adjusted padding */
+
 }
 
 
-.contact-content h3{
-    font-size: 32px;
+.contact-content h3 {
+
+    font-size: 28px; /* Adjusted for smaller screens */
+
     font-weight: 700;
+
     color: #1F2D5C;
+
     align-items: center;
+
 }
 
 
 #contact-content p {
-    font-size: 16px;
-    margin: 20px 0 40px;
+
+    font-size: 14px; /* Adjusted for smaller screens */
+
+    margin: 10px 0 20px; /* Adjusted margins */
+
 }
+
+@media (min-width: 769px) {
+
+    #profil, #parcours, #competence, #langages, #contact {
+
+        flex-direction: row; /* Ensure items are in a row */
+
+        height: 100vh; /* Maintain full height */
+
+        padding: 0 10%; /* Maintain padding */
+
+    }
+
+
+    .profil-content h3, .parcours-content h3, #competence-content h3, #langages-content h3, .contact-content h3 {
+
+        font-size: 36px; /* Increase font size for larger screens */
+
+    }
+
+
+    .profil-content p, .parcours-content p, #competence-content p, #langages-content p, #contact-content p {
+
+        font-size: 18px; /* Increase font size for larger screens */
+
+    }
+
+
+    .option {
+
+        padding: 0 40%; /* Increase padding for larger screens */
+
+    }
+
+
+    .btssio {
+
+        padding: 15%; /* Increase padding for larger screens */
+
+    }
+
+
+    #competence img, #langages img {
+
+        width: 50%; /* Adjust image size for larger screens */
+
+    }
+
+
+    .container .text-left .text-right h3 {
+
+        margin-left: 200px; /* Maintain left margin */
+
+    }
+
+}
+@media (min-width: 769px) and (max-width: 1500px) {
+
+    #profil, #parcours, #competence, #langages, #contact {
+
+        flex-direction: row; /* Ensure items are in a row */
+
+        height: 100vh; /* Maintain full height */
+
+        padding: 0 10%; /* Maintain padding */
+
+    }
+
+
+    .profil-content h3, .parcours-content h3, #competence-content h3, #langages-content h3, .contact-content h3 {
+
+        font-size: 36px; /* Increase font size for larger screens */
+
+    }
+
+
+    .profil-content p, .parcours-content p, #competence-content p, #langages-content p, #contact-content p {
+
+        font-size: 18px; /* Increase font size for larger screens */
+
+    }
+
+
+    .option {
+
+        padding: 0 40%; /* Increase padding for larger screens */
+
+    }
+
+
+    .btssio {
+
+        padding: 15%; /* Increase padding for larger screens */
+
+    }
+
+
+    #competence img, #langages img {
+
+        width: 50%; /* Adjust image size for larger screens */
+
+    }
+
+
+    .container .text-left .text-right h3 {
+
+        margin-left: 200px; /* Maintain left margin */
+
+    }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1500px)  {
+
+    #profil, #parcours, #competence, #langages, #contact {
+
+        flex-direction: column; /* Stack items vertically */
+
+        height: auto; /* Allow height to adjust */
+
+        padding: 0 5%; /* Reduce padding */
+
+    }
+
+
+    .profil-content h3, .parcours-content h3, #competence-content h3, #langages-content h3, .contact-content h3 {
+
+        font-size: 24px; /* Smaller font size */
+
+    }
+
+
+    .profil-content p, .parcours-content p, #competence-content p, #langages-content p, #contact-content p {
+
+        font-size: 14px; /* Smaller font size */
+
+    }
+
+
+    .option {
+
+        padding: 0 10%; /* Reduce padding */
+
+    }
+
+
+    .btssio {
+
+        padding: 5%; /* Reduce padding */
+
+    }
+
+
+    #competence img, #langages img {
+
+        width: 80%; /* Adjust image size for smaller screens */
+
+    }
+
+
+    .container .text-left .text-right h3 {
+
+        margin-left: 0; /* Remove left margin */
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+
+    #profil, #parcours, #competence, #langages, #contact {
+
+        padding: 0 2%; /* Further reduce padding */
+
+    }
+
+
+    .profil-content h3, .parcours-content h3, #competence-content h3, #langages-content h3, .contact-content h3 {
+
+        font-size: 20px; /* Even smaller font size */
+
+    }
+
+
+    .profil-content p, .parcours-content p, #competence-content p, #langages-content p, #contact-content p {
+
+        font-size: 12px; /* Even smaller font size */
+
+    }
+
+
+    .option {
+
+        padding: 0 5%; /* Further reduce padding */
+
+    }
+
+
+    .btssio {
+
+        padding: 3%; /* Further reduce padding */
+
+    }
+
+
+    #competence img, #langages img {
+
+        width: 80%; /* Adjust image size for very small screens */
+
+    }
+
+}
+
+
 
 
 footer{
@@ -501,3 +790,6 @@ article{
     position: center;
 }
 
+.blank {
+    color :#EDF2FE  ;
+}
