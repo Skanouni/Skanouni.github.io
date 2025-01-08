@@ -137,7 +137,7 @@ body{
 
 
 
-.profil{
+#profil{
     height: 100vh;
     display: flex;
     align-items: justify;
@@ -191,7 +191,7 @@ body{
     margin-left: 200px;
 }
 
-.parcours{
+#parcours{
     height: 50vh;
     display: flex;
     align-items: center;
@@ -394,7 +394,7 @@ body{
 }
 
 
-.competence{
+#competence{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -403,7 +403,7 @@ body{
 }
 
 
-.competence-content h3{
+#competence-content h3{
     font-size: 32px;
     font-weight: 700;
     color: #1F2D5C;
@@ -411,7 +411,7 @@ body{
 }
 
 
-.competence-content p {
+#competence-content p {
     font-size: 16px;
     margin: 20px 0 40px;
 }
@@ -427,7 +427,7 @@ body{
 }
 
 
-.competence img {
+#competence img {
     margin: 15px;
     width: 60%; /* Vous pouvez ajuster la taille selon vos besoins */
     height: auto;
@@ -436,7 +436,7 @@ body{
 }
 
 
-.langages img {
+#langages img {
     margin: 15px;
     width: 40%; /* Vous pouvez ajuster la taille selon vos besoins */
     height: auto;
@@ -445,7 +445,7 @@ body{
 }
 
 
-.langages{
+#langages{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -454,7 +454,7 @@ body{
 }
 
 
-.langages-content h3{
+#langages-content h3{
     font-size: 32px;
     font-weight: 700;
     color: #1F2D5C;
@@ -463,13 +463,13 @@ body{
 }
 
 
-.langages-content p {
+#langages-content p {
     font-size: 16px;
     margin: 20px 0 40px;
 }
 
 
-.contact{
+#contact{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -485,7 +485,7 @@ body{
 }
 
 
-.contact-content p {
+#contact-content p {
     font-size: 16px;
     margin: 20px 0 40px;
 }
