@@ -13,6 +13,7 @@
     </style>
 </head>
 <body>
+    <audio id="clickSound" src="click.mp3" preload="auto"></audio>
     <div class="navbar">
         <a href="/Portfolio/index.html">Index</a>
         <a href="#" onclick="window.open('../html/portfolio.html', '_blank');">Portfolio</a>
@@ -79,7 +80,7 @@
                         <span class="number-page">1</span>
                     
 
-                        <span class="nextprev-btn" data-page="turn-1">
+                        <span class="nextprev-btn" onclick="playSound()" data-page="turn-1">
                             <i class='bx bx-chevron-right' ></i>
                         
                         </span>
@@ -133,7 +134,7 @@
                         <span class="number-page">2</span>
 
 
-                        <span class="nextprev-btn back" data-page="turn-1">
+                        <span class="nextprev-btn back" onclick="playSound()" data-page="turn-1">
                             <i class='bx bx-chevron-left' ></i>
                         </span>
                     </div>
@@ -174,7 +175,7 @@
                         <span class="number-page">3</span>
 
 
-                        <span class="nextprev-btn" data-page="turn-2">
+                        <span class="nextprev-btn" onclick="playSound()" data-page="turn-2">
                             <i class='bx bx-chevron-right' ></i>
                         
                         </span>
@@ -219,7 +220,7 @@
                         
                         <span class="number-page">4</span>
 
-                        <span class="nextprev-btn back" data-page="turn-2">
+                        <span class="nextprev-btn back" onclick="playSound()" data-page="turn-2">
                             <i class='bx bx-chevron-left' ></i>
                         </span>
                     </div>
@@ -254,7 +255,7 @@
 
                         <span class="number-page">5</span>
 
-                        <span class="nextprev-btn" data-page="turn-3">
+                        <span class="nextprev-btn" onclick="playSound()" data-page="turn-3">
                             <i class='bx bx-chevron-right' ></i>
                         </span>
                     </div>
@@ -285,7 +286,7 @@
                         </div>
 
                         <span class="number-page">6</span>
-                        <span class="nextprev-btn back" data-page="turn-3">
+                        <span class="nextprev-btn back"  onclick="playSound()" data-page="turn-3">
                             <i class='bx bx-chevron-left' ></i>
                         </span>
                      </div>
@@ -338,7 +339,7 @@
                         </div>
                         <span class="number-page">7</span>
 
-                        <span class="nextprev-btn" data-page="turn-4">
+                        <span class="nextprev-btn" onclick="playSound()" data-page="turn-4">
                             <i class='bx bx-chevron-right' ></i>
                         </span>
                     </div>
@@ -368,7 +369,7 @@
                         </a>
 
                         <span class="number-page"></span>
-                        <span class="nextprev-btn back" data-page="turn-4">
+                        <span class="nextprev-btn back" onclick="playSound()" data-page="turn-4">
                             <i class='bx bx-chevron-left' ></i>
                         </span>
                     </div>
@@ -378,7 +379,13 @@
         </div>
     </div>
 
-
+    <script>
+    function playSound() {
+        const sound = document.getElementById("clickSound");
+        sound.currentTime = 0; // pour rejouer même si déjà en cours
+        sound.play();
+    }
+    </script>
     <script src="../js/script.js"></script>
 </body>
 </html>
