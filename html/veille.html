@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/veille.css">
-    
-    <style>
-      </style>
-    <title>Veille Technologique</title>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/veille.css" />
+  <title>Veille Technologique</title>
+  <style>
+    .articles-container {
+      margin: 20px auto;
+      padding: 10px;
+      width: 80%;
+    }
 
+    .article {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #f7f7f7;
+      transition: transform 0.2s ease;
+    }
+
+    .article:hover {
+      transform: scale(1.01);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .article h2 {
+      font-size: 1.2em;
+      margin: 0 0 10px;
+    }
+
+    .article .date {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
 
 <body>
   <div class="navbar">
@@ -18,93 +46,124 @@
     <a href="#" onclick="window.open('../html/veille.html', '_blank');">Veille</a>
   </div>
 
-    
-    <section>
-        <h1> > Qu'est ce qu'une veille technologique ?</h1>
-        <p style="margin-left: 10%;">Une veille technologique est un processus systématique de collecte, d'analyse et de suivi des informations liées aux évolutions technologiques dans un domaine spécifique.</p>
+  <section>
+    <h1> > Qu'est-ce qu'une veille technologique ?</h1>
+    <p style="margin-left: 10%;">
+      Une veille technologique est un processus systématique de collecte,
+      d'analyse et de suivi des informations liées aux évolutions technologiques dans un domaine spécifique.
+    </p>
 
-        <p> > A quoi sert elle ? :</p>
-        <p>La veille technologique consiste à surveiller les évolutions et innovations dans un domaine pour anticiper les opportunités et risques, et ainsi prendre des décisions stratégiques éclairées.</p>
-    </section>
-    <section>
-        <h1> > Security Awareness</h1>
-        <p>Le principe de la security awareness (sensibilisation à la sécurité) consiste à former et à informer les individus, généralement les employés d'une organisation, sur les bonnes pratiques et les risques liés à la sécurité informatique. <br> <br>L'objectif est de renforcer la vigilance et de réduire les comportements à risque, comme les clics sur des liens malveillants ou le partage d'informations sensibles. <br>Cela inclut des formations sur la gestion des mots de passe, la reconnaissance des attaques par phishing, et la sécurisation des appareils et des données personnelles.</p>
-        <p>J'ai choisi ce sujet car avec l'évolution rapide des technologies et l'augmentation des cybermenaces, la sensibilisation à la sécurité devient cruciale. <br>Les erreurs humaines, comme la négligence face aux attaques de phishing, restent une des principales causes de violations de sécurité. <br>Former les individus à reconnaître ces risques est donc essentiel pour protéger les données sensibles et renforcer la sécurité globale.</p>
-    </section>
-    <section>
-        <h1> > Articles récents</h1>
-        <div id="articles"></div>
+    <p> > À quoi sert-elle ? :</p>
+    <p>
+      La veille technologique consiste à surveiller les évolutions et innovations dans un domaine
+      pour anticiper les opportunités et risques, et ainsi prendre des décisions stratégiques éclairées.
+    </p>
+  </section>
 
-        <script>
-          const apiKey = 'f69f6e3b75b74dc799c059e5d64a356d'; // Remplace avec ta clé API
-          const url = `https://newsapi.org/v2/everything?q=security+awareness&language=en&sortBy=publishedAt&pageSize=5&apiKey=${apiKey}`;
+  <section>
+    <h1> > Security Awareness</h1>
+    <p>
+      Le principe de la security awareness (sensibilisation à la sécurité) consiste à former et à informer
+      les individus, généralement les employés d'une organisation, sur les bonnes pratiques et les risques
+      liés à la sécurité informatique. <br /><br />
+      L'objectif est de renforcer la vigilance et de réduire les comportements à risque, comme les clics
+      sur des liens malveillants ou le partage d'informations sensibles. <br />
+      Cela inclut des formations sur la gestion des mots de passe, la reconnaissance des attaques par phishing,
+      et la sécurisation des appareils et des données personnelles.
+    </p>
+    <p>
+      J'ai choisi ce sujet car avec l'évolution rapide des technologies et l'augmentation des cybermenaces,
+      la sensibilisation à la sécurité devient cruciale. <br />
+      Les erreurs humaines, comme la négligence face aux attaques de phishing, restent une des principales
+      causes de violations de sécurité. <br />
+      Former les individus à reconnaître ces risques est donc essentiel pour protéger les données sensibles
+      et renforcer la sécurité globale.
+    </p>
+  </section>
 
-          fetch(url)
-          .then(response => response.json())
-          .then(data => {
-            const container = document.getElementById('articles');
-            // Vérification du conteneur (assurez-vous qu'il a la classe 'articles-container')
-            container.classList.add('articles-container');
-            
-            data.articles.forEach(article => {
-              const div = document.createElement('div');
-              div.className = 'article'; // Ajoute la classe d'article
-
-              // Ajout du contenu HTML
-              div.innerHTML = `
-                <a href="${article.url}" target="_blank">
-                  <h2>${article.title}</h2>
-                  <p class="date">${new Date(article.publishedAt).toLocaleDateString()} - ${article.source.name}</p>
-                  <p>${article.description || ''}</p>
-                </a>
-              `;
-
-              // Ajout de l'article au conteneur
-              container.appendChild(div);
-            });
-          })
-          .catch(error => {
-            console.error('Erreur lors de la récupération des articles :', error);
-          });
-
-        </script>
-
-    </section>
-    <section>
-        <h1> > Page Four</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, nesciunt nihil laudantium ab modi aut ullam. Labore fuga aliquid consequuntur voluptate enim unde odio quia, dolores architecto asperiores repellat, voluptatibus sint provident quam ullam ratione nulla accusantium error ad. Molestias eos magnam accusamus quod commodi esse ipsa. Deserunt, enim laudantium!</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, nesciunt nihil laudantium ab modi aut ullam. Labore fuga aliquid consequuntur voluptate enim unde odio quia, dolores architecto asperiores repellat, voluptatibus sint provident quam ullam ratione nulla accusantium error ad. Molestias eos magnam accusamus quod commodi esse ipsa. Deserunt, enim laudantium!</p>
-    </section>
+  <section>
+    <h1> > Articles récents</h1>
+    <div id="articles"></div>
 
     <script>
-        let sections = document.querySelectorAll("section");
-        let currentSection = 0;
-    
-        // Fonction de scroll vers la section suivante ou précédente
-        function scrollToSection(sectionIndex) {
-          if (sectionIndex >= 0 && sectionIndex < sections.length) {
-            sections[sectionIndex].scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-            currentSection = sectionIndex;
+      const apiKey = 'TA_CLE_API_GNEWS'; // Remplace par ta vraie clé GNews
+      const url = `https://gnews.io/api/v4/search?q=security%20awareness&lang=en&max=5&token=${apiKey}`;
+
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          const container = document.getElementById('articles');
+          container.classList.add('articles-container');
+
+          data.articles.forEach((article) => {
+            const div = document.createElement('div');
+            div.className = 'article';
+
+            div.innerHTML = `
+              <a href="${article.url}" target="_blank">
+                <h2>${article.title}</h2>
+                <p class="date">${new Date(article.publishedAt).toLocaleDateString()} - ${article.source.name}</p>
+                <p>${article.description || ''}</p>
+              </a>
+            `;
+
+            container.appendChild(div);
+          });
+        })
+        .catch((error) => {
+          console.error('Erreur lors de la récupération des articles :', error);
+          const container = document.getElementById('articles');
+          container.innerHTML = `<p>Impossible de charger les articles pour le moment.</p>`;
+        });
+    </script>
+  </section>
+
+  <section>
+    <h1> > Page Four</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, nesciunt nihil laudantium ab modi aut ullam.
+      Labore fuga aliquid consequuntur voluptate enim unde odio quia, dolores architecto asperiores repellat,
+      voluptatibus sint provident quam ullam ratione nulla accusantium error ad. Molestias eos magnam accusamus
+      quod commodi esse ipsa. Deserunt, enim laudantium!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, nesciunt nihil laudantium ab modi aut ullam.
+      Labore fuga aliquid consequuntur voluptate enim unde odio quia, dolores architecto asperiores repellat,
+      voluptatibus sint provident quam ullam ratione nulla accusantium error ad. Molestias eos magnam accusamus
+      quod commodi esse ipsa. Deserunt, enim laudantium!
+    </p>
+  </section>
+
+  <script>
+    let sections = document.querySelectorAll("section");
+    let currentSection = 0;
+
+    function scrollToSection(sectionIndex) {
+      if (sectionIndex >= 0 && sectionIndex < sections.length) {
+        sections[sectionIndex].scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        currentSection = sectionIndex;
+      }
+    }
+
+    window.addEventListener(
+      "wheel",
+      function (e) {
+        if (e.deltaY > 0) {
+          if (currentSection < sections.length - 1) {
+            scrollToSection(currentSection + 1);
+          }
+        } else {
+          if (currentSection > 0) {
+            scrollToSection(currentSection - 1);
           }
         }
-    
-        window.addEventListener("wheel", function (e) {
-          if (e.deltaY > 0) {
-            // Si on scroll vers le bas (vers la prochaine section)
-            if (currentSection < sections.length - 1) {
-              scrollToSection(currentSection + 1);
-            }
-          } else {
-            // Si on scroll vers le haut (vers la section précédente)
-            if (currentSection > 0) {
-              scrollToSection(currentSection - 1);
-            }
-          }
-          e.preventDefault(); // Empêche le comportement de scroll par défaut
-        }, { passive: false });
-      </script>
+        e.preventDefault();
+      },
+      { passive: false }
+    );
+  </script>
 </body>
 </html>
