@@ -386,6 +386,13 @@
         sound.play();
     }
     </script>
+        <script>
+        document.querySelectorAll('.nextprev-btn').forEach(el => {
+            el.addEventListener('click', () => {
+                playSound();
+            });
+        });
+    </script>
     <script src="../js/script.js"></script>
 </body>
 </html>
