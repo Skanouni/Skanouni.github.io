@@ -36,37 +36,35 @@
         <div id="articles"></div>
 
         <script>
-          const apiKey = 'f69f6e3b75b74dc799c059e5d64a356d'; // Remplace avec ta clé API
-          const url = `https://newsapi.org/v2/everything?q=security+awareness&language=en&sortBy=publishedAt&pageSize=5&apiKey=${apiKey}`;
-
+          const apiKey = 'f7f5c0e3c513d07c84c31c4e3b2715f0'; // Remplace par ta vraie clé API GNews
+          const url = `https://gnews.io/api/v4/search?q=security%20awareness&lang=en&max=5&token=${apiKey}`;
+        
           fetch(url)
-          .then(response => response.json())
-          .then(data => {
-            const container = document.getElementById('articles');
-            // Vérification du conteneur (assurez-vous qu'il a la classe 'articles-container')
-            container.classList.add('articles-container');
-            
-            data.articles.forEach(article => {
-              const div = document.createElement('div');
-              div.className = 'article'; // Ajoute la classe d'article
-
-              // Ajout du contenu HTML
-              div.innerHTML = `
-                <a href="${article.url}" target="_blank">
-                  <h2>${article.title}</h2>
-                  <p class="date">${new Date(article.publishedAt).toLocaleDateString()} - ${article.source.name}</p>
-                  <p>${article.description || ''}</p>
-                </a>
-              `;
-
-              // Ajout de l'article au conteneur
-              container.appendChild(div);
+            .then(response => response.json())
+            .then(data => {
+              const container = document.getElementById('articles');
+              container.classList.add('articles-container');
+        
+              data.articles.forEach(article => {
+                const div = document.createElement('div');
+                div.className = 'article';
+        
+                div.innerHTML = `
+                  <a href="${article.url}" target="_blank">
+                    <h2>${article.title}</h2>
+                    <p class="date">${new Date(article.publishedAt).toLocaleDateString()} - ${article.source.name}</p>
+                    <p>${article.description || ''}</p>
+                  </a>
+                `;
+        
+                container.appendChild(div);
+              });
+            })
+            .catch(error => {
+              console.error('Erreur lors de la récupération des articles :', error);
+              const container = document.getElementById('articles');
+              container.innerHTML = `<p>Impossible de charger les articles pour le moment.</p>`;
             });
-          })
-          .catch(error => {
-            console.error('Erreur lors de la récupération des articles :', error);
-          });
-
         </script>
 
     </section>
@@ -105,6 +103,36 @@
           }
           e.preventDefault(); // Empêche le comportement de scroll par défaut
         }, { passive: false });
+
+        const express = require('express');
+        const axios = require('axios');
+        const app = express();
+        const PORT = 3000;
+        
+        const apiKey = 'TA_CLE_API';
+        
+        app.get('/news', async (req, res) => {
+          try {
+            const response = await axios.get(`https://newsapi.org/v2/everything`, {
+              params: {
+                q: 'security awareness',
+                language: 'en',
+                sortBy: 'publishedAt',
+                pageSize: 5,
+                apiKey: apiKey
+              }
+            });
+            res.json(response.data);
+          } catch (error) {
+            res.status(500).json({ error: 'Erreur lors de la récupération des articles.' });
+          }
+        });
+        
+        app.listen(PORT, () => {
+          console.log(`Serveur proxy lancé sur http://localhost:${PORT}`);
+        });
       </script>
+
+
 </body>
 </html>
