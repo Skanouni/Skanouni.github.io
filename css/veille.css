@@ -1,0 +1,139 @@
+@font-face{font-display:swap;font-family:Array;font-weight:100;src:url(/Portfolio/fonts/Array-Regular.ttf) format("woff2")}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px; /* Je réduis légèrement la taille de la police pour un affichage plus compact */
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: row; /* Ligne horizontale */
+    overflow-x: hidden;   /* Pas de scroll horizontal */
+    overflow-y: hidden;   /* Pas de scroll vertical */
+    height: 100vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+  
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+}
+
+.navbar a {
+    display: inline-block;
+    font-family: 'Array';
+    font-size: 20px;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.navbar a:hover {
+    color: rgb(199, 199, 199);
+  }
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    flex: none;
+    direction: ltr; /* remettre le texte dans le bon sens */
+}
+  
+section:nth-child(1) {
+    background-color: #000000;
+}
+  
+section:nth-child(2) {
+    background-color: #000000;
+}
+  
+section:nth-child(3) {
+    background-color: #000000;
+}
+  
+section:nth-child(4) {
+    background-color: #000000;
+}
+  
+section h1 {
+    font-size: 4em; /* Je réduis un peu la taille du titre */
+    font-family: 'Array';
+    color: white;
+}
+  
+section p {
+    margin-top: 30px;
+    line-height: 30px;
+    width: 85%;
+    font-family: 'Array';
+    font-size: 20px;
+    text-align: justify;
+    color: white;
+}
+  
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  row-gap: 45px; /* Espacement augmenté entre les articles */
+  column-gap: 50px;
+  max-width: 800px; /* Toujours la largeur maximale souhaitée */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.article {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    height: 180px; /* Réduit pour une taille plus petite */
+    transition: transform 0.2s ease-in-out;
+}
+  
+.article:hover {
+    transform: scale(1.05); /* Légère animation au survol */
+}
+  
+.article a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 12px;
+    height: 100%;
+}
+  
+.article h2 {
+    font-size: 1em;
+    margin-bottom: 6px;
+    color: white; /* Titre en blanc */
+}
+  
+.article p, .date {
+    font-size: 0.85em;
+    color: #ccc;
+}
+  

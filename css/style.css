@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+
+.animated-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    animation: changeFont 1.8s infinite;
+}
+
+
+@font-face{font-display:swap;font-family:Array;font-weight:100;src:url(/Portfolio/fonts/Array-Regular.ttf) format("woff2")}
+
+@keyframes changeFont {
+    0% {
+        font-family: 'Charm';
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    10% {
+        font-family: 'Courrier New';
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    20% {
+        font-family: 'Hind Madurai';
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    30% {
+        font-family: 'Pompiere';
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    40% {
+        font-family: 'Array';
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    50% {
+        font-family: 'vt323';
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    60% {
+        font-family: 'Over the Rainbow';
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    70% {
+        font-family: 'Underdog';
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    80% {
+        font-family: 'Geo';
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    90% {
+        font-family: 'Arial';
+        font-size: 80px;
+        line-height: 1.1;
+    }
+    100% {
+        font-family: 'Charm';
+        font-size: 80px;
+        line-height: 1.1;
+    }
+}
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+}
+
+.navbar a {
+    display: inline-block;
+    font-family: 'Array';
+    font-size: 20px;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.navbar a:hover {
+    color: rgb(199, 199, 199);
+  }
+
+
