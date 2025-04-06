@@ -26,7 +26,7 @@ body {
 }
 
 
-@font-face{font-display:swap;font-family:Array;font-weight:100;src:url(/Portfolio/fonts/Array-Regular.ttf) format("woff2")}
+@font-face{font-display:swap;font-family:Array;font-weight:100;src:url(../fonts/Array-Regular.ttf) format("woff2")}
 
 @keyframes changeFont {
     0% {
