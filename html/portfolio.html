@@ -316,7 +316,7 @@
                             <div class="services-content">
                                 <i class='bx bx-code-alt' ></i>
                                 <h3>LAMP</h3>
-                                <p>Procédure d'installation d'un serveur LAMP.</p>
+                                <p>Procédure d'installation d'un serveur LAMP.</p><br>
                                 <a href="#" class="btn" onclick="window.open('../pdf/Compte rendu LAMP.pdf', '_blank');">En savoir plus</a>
                             </div>
                             
@@ -324,7 +324,7 @@
                             <div class="services-content">
                                 <i class='bx bx-code-alt' ></i>
                                 <h3>Debian 12</h3>
-                                <p>Procédure d'installation de Debian 12.</p>
+                                <p>Procédure d'installation de Debian 12.</p><br>
                                 <a href="#" class="btn" onclick="window.open('../pdf/Compte_rendu_debian.pdf', '_blank');">En savoir plus</a>
                             </div>
 
@@ -353,10 +353,10 @@
                         <h1 class="title">Contactez Moi!</h1>
 
                         <div class="contact-box">
-                            <form action="#">
+                            <form action="https://formspree.io/f/mnnpodlw" method="POST">
                                 <input type="text" class="field" placeholder="Nom Prenom" required>
-                                <input type="text" class="field" placeholder="Email" required>
-                                <textarea name="" id="" columns="30" rows="10" class="field" placeholder="Votre Message" required></textarea>
+                                <input type="email" class="field" placeholder="Email" required>
+                                <textarea name="message" id="" columns="30" rows="10" class="field" placeholder="Votre Message" required></textarea>
                                 <input type="submit" class="btn" value="Send Message">
                             </form>
                         </div>
@@ -385,6 +385,13 @@
         sound.currentTime = 0; // pour rejouer même si déjà en cours
         sound.play();
     }
+    </script>
+        <script>
+        document.querySelectorAll('.nextprev-btn').forEach(el => {
+            el.addEventListener('click', () => {
+                playSound();
+            });
+        });
     </script>
         <script>
         document.querySelectorAll('.nextprev-btn').forEach(el => {
