@@ -38,23 +38,20 @@ function reverseIndex() {
     }
 }
 
-//back profile button when click
-const backProfileBtn = document.querySelectorAll('.back-profile');
+const backProfileBtn = document.querySelector(".back-profile");
 
-backProfileBtn.onclick = () => {
-    pages.forEach((_, index) => {
-        setTimeout(() => {
-            reverseIndex();
-            pages[pageNumber].classList.remove('turn');
+backProfileBtn.addEventListener("click", () => {
+  for (let i = pages.length - 1; i >= 0; i--) {
+    pages[i].classList.remove("turn");
 
-            setTimeout(() => {
-                reverseIndex();
-                pages[pageNumber].style.zIndex = 10 + index;
-            }, 500)
 
-        }, (index + 1) + 200 + 100)
-    })
-}
+    setTimeout(() => {
+      pages[i].style.zIndex = pages.length - i;
+    }, 500); // 500ms = durée de l'anim CSS
+  }
+});
+
+
 
 //opening animation
 const coverRight = document.querySelector('.cover.cover-right');
@@ -88,3 +85,20 @@ pages.forEach((_, index) => {
 
     }, (index + 1) + 200 + 2100)
 })
+
+
+
+// contact-me button logic
+const contactMeBtn = document.querySelector('.contact-me');
+
+contactMeBtn.addEventListener('click', () => {
+    pages.forEach((page, index) => {
+        setTimeout(() => {
+            page.classList.add('turn');
+            setTimeout(() => {
+                page.style.zIndex = 20 + index;
+            }, 500);
+        }, index * 100); // délai pour l'effet page par page
+    });
+});
+
