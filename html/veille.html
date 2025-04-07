@@ -1,15 +1,138 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/veille.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.css" rel="stylesheet">
-    <style>
-      </style>
-    <title>Veille Technologique</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.css" rel="stylesheet">
+  <title>Veille Technologique</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333;
+      margin-top: 15px;
+      max-width: 60%;
+      text-align: justify;
+      margin: 10px auto;
+    }
+
+    .hashtags {
+      text-align: center;
+      font-size: 0.9rem;
+      color: rgba(168, 168, 168, 0.541);
+      letter-spacing: 1px;
+    }
+
+    .articles-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      max-width: 70%;
+      margin: auto;
+    }
+
+    .article {
+      background-color: #f9f9f9;
+      border-left: 4px solid #444;
+      padding: 15px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .article h2 {
+      font-size: 1.3rem;
+      color: #222;
+    }
+
+    .article .date {
+      font-size: 0.85rem;
+      color: gray;
+    }
+
+    .article p {
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        max-width: 90%;
+      }
+
+      .navbar a {
+        font-size: 1rem;
+        padding: 8px 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
 
 <body>
   <div class="navbar">
@@ -18,144 +141,109 @@
     <a href="#" onclick="window.open('../html/veille.html', '_blank');">Veille</a>
   </div>
 
-    
-  <section style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; width: 100%; padding: 20px;">
+  <section>
     <h1> > Qu'est ce qu'une veille technologique ?</h1>
-    <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%;">
-        Une veille technologique est un processus systématique de collecte, d'analyse et de suivi des informations liées aux évolutions technologiques dans un domaine spécifique.
-    </p>
+    <p>Une veille technologique est un processus systématique de collecte, d'analyse et de suivi des informations liées aux évolutions technologiques dans un domaine spécifique.</p>
+    <p>> A quoi sert-elle ? :</p>
+    <p>La veille technologique consiste à surveiller les évolutions et innovations dans un domaine pour anticiper les opportunités et risques, et ainsi prendre des décisions stratégiques éclairées.</p>
+    <p class="hashtags">#ZeroTrust #SecurityAwareness #Cybersecurity #IncidentResponse #Phishing</p>
+  </section>
 
-    <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%;">
-        > A quoi sert-elle ? :
-    </p>
-    <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%;">
-        La veille technologique consiste à surveiller les évolutions et innovations dans un domaine pour anticiper les opportunités et risques, et ainsi prendre des décisions stratégiques éclairées.
-    </p>
-    <p style="text-align: center; font-size: 14px; color: rgba(168, 168, 168, 0.541);   letter-spacing: 1px; ">#ZeroTrust #SecurityAwareness #Cybersecurity #IncidentResponse #Phishing</p>
-</section>
-
-<section style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; width: 100%; padding: 20px;">
+  <section>
     <h1> > Security Awareness</h1>
-    <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%;">
-      > Le principe de la security awareness (sensibilisation à la sécurité) consiste à former et à informer les individus, généralement les employés d'une organisation, sur les bonnes pratiques et les risques liés à la sécurité informatique.
-    </p>
-    <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%;">
-      > L'objectif est de renforcer la vigilance et de réduire les comportements à risque, comme les clics sur des liens malveillants ou le partage d'informations sensibles.
-        Cela inclut des formations sur la gestion des mots de passe, la reconnaissance des attaques par phishing, et la sécurisation des appareils et des données personnelles.
-    </p>
-    <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%;">
-      > J'ai choisi ce sujet car avec l'évolution rapide des technologies et l'augmentation des cybermenaces, la sensibilisation à la sécurité devient cruciale.
-    </p>
-    <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%;">
-      > Les erreurs humaines, comme la négligence face aux attaques de phishing, restent une des principales causes de violations de sécurité.
-        Former les individus à reconnaître ces risques est donc essentiel pour protéger les données sensibles et renforcer la sécurité globale.
-    </p>
-    <p style="text-align: center; font-size: 12px; color: rgba(168, 168, 168, 0.541);   letter-spacing: 1px; ">#ZeroTrust #SecurityAwareness #Cybersecurity #IncidentResponse #Phishing</p>
-</section>
-    <section>
-        <h1> > Articles récents</h1>
-        <div id="articles"></div>
+    <p>> Le principe de la security awareness (sensibilisation à la sécurité) consiste à former et à informer les individus, généralement les employés d'une organisation, sur les bonnes pratiques et les risques liés à la sécurité informatique.</p>
+    <p>> L'objectif est de renforcer la vigilance et de réduire les comportements à risque, comme les clics sur des liens malveillants ou le partage d'informations sensibles. Cela inclut des formations sur la gestion des mots de passe, la reconnaissance des attaques par phishing, et la sécurisation des appareils et des données personnelles.</p>
+    <p>> J'ai choisi ce sujet car avec l'évolution rapide des technologies et l'augmentation des cybermenaces, la sensibilisation à la sécurité devient cruciale.</p>
+    <p>> Les erreurs humaines, comme la négligence face aux attaques de phishing, restent une des principales causes de violations de sécurité. Former les individus à reconnaître ces risques est donc essentiel pour protéger les données sensibles et renforcer la sécurité globale.</p>
+    <p class="hashtags">#ZeroTrust #SecurityAwareness #Cybersecurity #IncidentResponse #Phishing</p>
+  </section>
 
-        <script>
-          const apiKey = 'f69f6e3b75b74dc799c059e5d64a356d'; // Remplace avec ta clé API
-          const url = `https://newsapi.org/v2/everything?q=cybersecurity+awareness&language=en&sortBy=publishedAt&pageSize=4&apiKey=${apiKey}`;  // Limiter à 4 articles
-        
-          fetch(url)
-            .then(response => response.json())
-            .then(data => {
-              const container = document.getElementById('articles');
-              // Vérification du conteneur (assurez-vous qu'il a la classe 'articles-container')
-              container.classList.add('articles-container');
-              
-              // Limiter le nombre d'articles à 4 si nécessaire
-              const articlesToDisplay = data.articles.slice(0, 4); // Sélectionner seulement les 4 premiers articles
-        
-              articlesToDisplay.forEach(article => {
-                const div = document.createElement('div');
-                div.className = 'article'; // Ajoute la classe d'article
-        
-                // Ajout du contenu HTML
-                div.innerHTML = `
-                  <a href="${article.url}" target="_blank">
-                    <h2>${article.title}</h2>
-                    <p class="date">${new Date(article.publishedAt).toLocaleDateString()} - ${article.source.name}</p>
-                    <p>${article.description || ''}</p>
-                  </a>
-                `;
-        
-                // Ajout de l'article au conteneur
-                container.appendChild(div);
-              });
-            })
-            .catch(error => {
-              console.error('Erreur lors de la récupération des articles :', error);
-            });
-        </script>
-    <p style="text-align: center; font-size: 14px; color: rgba(168, 168, 168, 0.541);   letter-spacing: 1px; ">#ZeroTrust #SecurityAwareness #Cybersecurity #IncidentResponse #Phishing</p>
-    </section>
-    <section style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; width: 100%; padding: 20px;">
-      <h1> > Mes recherches</h1>
-      <!-- Texte justifié et centré -->
-      <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%; ">
-        J'ai effectué essentiellement ma veille sur la plateforme Start.me, c'est une plateforme de veille intuitive et polyvalente. <br> 
-        <a href="../images/Security_Awareness.PNG" style="color: rgb(206, 203, 255);">Voici un aperçu.<i class='bx bx-link-external'></i></a>
-      </p>
-      
-      <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%; ">
-        J'ai pu m'informer au fil des jours sur des méthodes de prévention et les différentes failles concernant la cybersécurité. <br><br>
-        Exemples de prévention :
-      </p>
-      
-      <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%; ">
-        > Formation des employés pour reconnaître les tentatives de phishing et utiliser des mots de passe complexes. <br>
-        > Mise en place de l'authentification multi-facteurs (MFA) pour renforcer l'accès aux systèmes sensibles. <br>
-        > Adoption de principes de sécurité Zero Trust, où chaque utilisateur et appareil doivent être vérifiés avant d'accéder aux ressources internes. <br>
-        > Surveillance continue avec des outils de détection d'intrusions pour identifier rapidement les activités suspectes. (exemples : <strong>Snort</strong>, <strong>Suricata</strong>, <strong>OSSEC</strong>).
-      </p>
-      
-      <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%; ">
-        Exemples de failles récentes :
-      </p>
-      
-      <p style="text-align: justify; font-size: 14px; margin: 0 auto; margin-top: 20px; max-width: 50%; ">
-        > Least privilege (2025): Il s'agissait d'une vulnérabilité de type "escalade de privilèges" dans Google Cloud Run, où des utilisateurs avec des permissions minimales pouvaient déployer des images de conteneurs privées sans autorisation. Cela est arrivé parce que les permissions IAM (Identity and Access Management) ne limitaient pas assez les accès aux images. Cette faille montre que le principe du moindre privilège, bien qu'utile, n'est pas suffisant pour sécuriser les systèmes sans contrôles d'accès plus fins et spécifiques. <br><br>
-        > Panne informatique mondiale (fin 2024) : Une mise à jour défectueuse du logiciel Falcon Sensor de CrowdStrike a causé le plantage de 8,5 millions d'ordinateurs, affectant des compagnies aériennes comme Delta Airlines, avec des pertes de 500 millions de dollars.
-      </p>
-      
-      
-      <p style="text-align: center; font-size: 14px; color: rgba(168, 168, 168, 0.541);   letter-spacing: 1px; ">#ZeroTrust #SecurityAwareness #Cybersecurity #IncidentResponse #Phishing</p>
-    </section>
-    
+  <section>
+    <h1> > Articles récents</h1>
+    <div id="articles"></div>
+    <p class="hashtags">#ZeroTrust #SecurityAwareness #Cybersecurity #IncidentResponse #Phishing</p>
+  </section>
 
-    <script>
-        let sections = document.querySelectorAll("section");
-        let currentSection = 0;
-    
-        // Fonction de scroll vers la section suivante ou précédente
-        function scrollToSection(sectionIndex) {
-          if (sectionIndex >= 0 && sectionIndex < sections.length) {
-            sections[sectionIndex].scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-            currentSection = sectionIndex;
-          }
+  <section>
+    <h1> > Mes recherches</h1>
+    <p>J'ai effectué essentiellement ma veille sur la plateforme Start.me, c'est une plateforme de veille intuitive et polyvalente. <br>
+      <a href="../images/Security_Awareness.PNG" style="color: rgb(206, 203, 255);">Voici un aperçu.<i class='bx bx-link-external'></i></a>
+    </p>
+
+    <p>J'ai pu m'informer au fil des jours sur des méthodes de prévention et les différentes failles concernant la cybersécurité. <br><br>Exemples de prévention :</p>
+
+    <p>
+      > Formation des employés pour reconnaître les tentatives de phishing et utiliser des mots de passe complexes. <br>
+      > Mise en place de l'authentification multi-facteurs (MFA) pour renforcer l'accès aux systèmes sensibles. <br>
+      > Adoption de principes de sécurité Zero Trust, où chaque utilisateur et appareil doivent être vérifiés avant d'accéder aux ressources internes. <br>
+      > Surveillance continue avec des outils de détection d'intrusions pour identifier rapidement les activités suspectes. (exemples : <strong>Snort</strong>, <strong>Suricata</strong>, <strong>OSSEC</strong>).
+    </p>
+
+    <p>Exemples de failles récentes :</p>
+
+    <p>
+      > Least privilege (2025) : Une vulnérabilité dans Google Cloud Run permettait à des utilisateurs avec des permissions minimales de déployer des images de conteneurs privées sans autorisation. Les contrôles IAM étaient mal configurés. <br><br>
+      > Panne informatique mondiale (fin 2024) : Une mise à jour défectueuse du logiciel Falcon Sensor de CrowdStrike a causé le plantage de 8,5 millions d'ordinateurs, affectant des compagnies aériennes comme Delta Airlines, avec des pertes de 500 millions de dollars.
+    </p>
+    <p class="hashtags">#ZeroTrust #SecurityAwareness #Cybersecurity #IncidentResponse #Phishing</p>
+  </section>
+
+  <script>
+    const apiKey = 'f69f6e3b75b74dc799c059e5d64a356d';
+    const url = `https://newsapi.org/v2/everything?q=cybersecurity+awareness&language=en&sortBy=publishedAt&pageSize=4&apiKey=${apiKey}`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('articles');
+        container.classList.add('articles-container');
+
+        const articlesToDisplay = data.articles.slice(0, 4);
+
+        articlesToDisplay.forEach(article => {
+          const div = document.createElement('div');
+          div.className = 'article';
+          div.innerHTML = `
+            <a href="${article.url}" target="_blank">
+              <h2>${article.title}</h2>
+              <p class="date">${new Date(article.publishedAt).toLocaleDateString()} - ${article.source.name}</p>
+              <p>${article.description || ''}</p>
+            </a>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(error => {
+        console.error('Erreur lors de la récupération des articles :', error);
+      });
+  </script>
+
+  <script>
+    let sections = document.querySelectorAll("section");
+    let currentSection = 0;
+
+    function scrollToSection(sectionIndex) {
+      if (sectionIndex >= 0 && sectionIndex < sections.length) {
+        sections[sectionIndex].scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+        currentSection = sectionIndex;
+      }
+    }
+
+    window.addEventListener("wheel", function (e) {
+      if (e.deltaY > 0) {
+        if (currentSection < sections.length - 1) {
+          scrollToSection(currentSection + 1);
         }
-    
-        window.addEventListener("wheel", function (e) {
-          if (e.deltaY > 0) {
-            // Si on scroll vers le bas (vers la prochaine section)
-            if (currentSection < sections.length - 1) {
-              scrollToSection(currentSection + 1);
-            }
-          } else {
-            // Si on scroll vers le haut (vers la section précédente)
-            if (currentSection > 0) {
-              scrollToSection(currentSection - 1);
-            }
-          }
-          e.preventDefault(); // Empêche le comportement de scroll par défaut
-        }, { passive: false });
-      </script>
+      } else {
+        if (currentSection > 0) {
+          scrollToSection(currentSection - 1);
+        }
+      }
+      e.preventDefault();
+    }, { passive: false });
+  </script>
 </body>
-</html>l
+</html>
