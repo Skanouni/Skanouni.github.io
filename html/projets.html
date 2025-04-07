@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste de Projets</title>
-    <link rel="stylesheet" href="../css/projets.css">
+    <link rel="stylesheet" href="/Portfolio/css/projets.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Charm:wght@400;700&family=Delicious+Handrawn&family=Doto:wght@100..900&family=Geo:ital@0;1&family=Hind+Madurai:wght@300;400;500;600;700&family=Over+the+Rainbow&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Pompiere&family=Underdog&family=VT323&display=swap');
@@ -12,11 +12,10 @@
     </style>
 </head>
 <body>
-    <audio id="clickSound" src="click.mp3" preload="auto"></audio>
     <div class="navbar">
-        <a href="../index.html">Index</a>
-        <a href="#" onclick="window.open('../html/portfolio.html', '_blank');">Portfolio</a>
-        <a href="#" onclick="window.open('../html/veille.html', '_blank');">Veille</a>
+        <a href="/Portfolio/index.html">Index</a>
+        <a href="#" onclick="window.open('/Portfolio/html/portfolio.html', '_blank');">Portfolio</a>
+        <a href="#" onclick="window.open('/Portfolio/html/veille.html', '_blank');">Veille</a>
       </div>
 
     
@@ -29,7 +28,7 @@
             <div class="book-page page-left">
                 <div class="profile-page portfolio-box">
                     <div class="img-box">
-                        <img src="../images/ECONET.jpg" alt="">
+                        <img src="/Portfolio/images/ECONET.jpg" alt="">
                     </div>
                     <div class="info-box">
                         <div class="info-title">
@@ -58,7 +57,7 @@
 
                     <div class="portfolio-box">
                         <div class="img-box">
-                            <img src="../images/Accueil.png" alt="">
+                            <img src="/Portfolio/images/Accueil.png" alt="">
                         </div>
 
                         
@@ -95,7 +94,7 @@
 
                         <div class="portfolio-box">
                             <div class="img-box">
-                                <img src="../images/maquette-jo-ordi-index.png" alt="">
+                                <img src="/Portfolio/images/maquette-jo-ordi-index.png" alt="">
                             </div>
 
                             
@@ -138,7 +137,7 @@
 
                         <div class="portfolio-box">
                             <div class="img-box">
-                                <img src="../images/disney.png" alt="">
+                                <img src="/Portfolio/images/disney.png" alt="">
                             </div>
 
                             
@@ -174,7 +173,7 @@
 
                         <div class="portfolio-box">
                             <div class="img-box">
-                                <img src="../images/MercureAssistance.png" alt="">
+                                <img src="/Portfolio/images/MercureAssistance.png" alt="">
                             </div>
 
                             
@@ -209,7 +208,7 @@
 
                         <div class="portfolio-box">
                             <div class="img-box">
-                                <img src="../images/game.png" alt="">
+                                <img src="/Portfolio/images/game.png" alt="">
                             </div>
 
                             
@@ -239,10 +238,10 @@
                         <h1 class="title">Contact Me!</h1>
 
                         <div class="contact-box">
-                            <form action="https://formspree.io/f/mnnpodlw" method="POST">
+                            <form action="#">
                                 <input type="text" class="field" placeholder="Nom Prenom" required>
-                                <input type="email" class="field" placeholder="Email" required>
-                                <textarea name="message" id="" columns="30" rows="10" class="field" placeholder="Votre Message" required></textarea>
+                                <input type="text" class="field" placeholder="Email" required>
+                                <textarea name="" id="" columns="30" rows="10" class="field" placeholder="Votre Message" required></textarea>
                                 <input type="submit" class="btn" value="Send Message">
                             </form>
                         </div>
@@ -265,21 +264,8 @@
 
         </div>
     </div>
-    <script>
-    function playSound() {
-        const sound = document.getElementById("clickSound");
-        sound.currentTime = 0; // pour rejouer même si déjà en cours
-        sound.play();
-    }
-    </script>
-    <script>
-        document.querySelectorAll('.nextprev-btn').forEach(el => {
-            el.addEventListener('click', () => {
-                playSound();
-            });
-        });
-    </script>
 
-    <script src="../js/script.js"></script>
+
+    <script src="/Portfolio/js/script.js"></script>
 </body>
 </html>
