@@ -86,35 +86,36 @@
     <div id="articles"></div>
 
     <script>
-      const apiKey = 'TA_CLE_API_GNEWS'; // Remplace par ta vraie clé GNews
-      const url = `https://gnews.io/api/v4/search?q=security%20awareness&lang=en&max=5&token=${apiKey}`;
+          const apiKey = 'f69f6e3b75b74dc799c059e5d64a356d'; 
+          const url = `https://newsapi.org/v2/everything?q=security+awareness&language=en&sortBy=publishedAt&pageSize=5&apiKey=${apiKey}`;
 
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-          const container = document.getElementById('articles');
-          container.classList.add('articles-container');
+          fetch(url)
+            .then(response => response.json())
+            .then(data => {
+              const container = document.getElementById('articles');
+              // Vérification du conteneur (assurez-vous qu'il a la classe 'articles-container')
+              container.classList.add('articles-container');
+              
+              data.articles.forEach(article => {
+                const div = document.createElement('div');
+                div.className = 'article'; // Ajoute la classe d'article
 
-          data.articles.forEach((article) => {
-            const div = document.createElement('div');
-            div.className = 'article';
+                // Ajout du contenu HTML
+                div.innerHTML = `
+                  <a href="${article.url}" target="_blank">
+                    <h2>${article.title}</h2>
+                    <p class="date">${new Date(article.publishedAt).toLocaleDateString()} - ${article.source.name}</p>
+                    <p>${article.description || ''}</p>
+                  </a>
+                `;
 
-            div.innerHTML = `
-              <a href="${article.url}" target="_blank">
-                <h2>${article.title}</h2>
-                <p class="date">${new Date(article.publishedAt).toLocaleDateString()} - ${article.source.name}</p>
-                <p>${article.description || ''}</p>
-              </a>
-            `;
-
-            container.appendChild(div);
-          });
-        })
-        .catch((error) => {
-          console.error('Erreur lors de la récupération des articles :', error);
-          const container = document.getElementById('articles');
-          container.innerHTML = `<p>Impossible de charger les articles pour le moment.</p>`;
-        });
+                // Ajout de l'article au conteneur
+                container.appendChild(div);
+              });
+            })
+            .catch(error => {
+              console.error('Erreur lors de la récupération des articles :', error);
+            });
     </script>
   </section>
 
