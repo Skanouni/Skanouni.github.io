@@ -26,7 +26,7 @@ body {
 }
 
 
-@font-face{font-display:swap;font-family:Array;font-weight:100;src:url(../fonts/Array-Regular.ttf) format("woff2")}
+@font-face{font-display:swap;font-family:Array;font-weight:100;src:url(https://github.com/Skanouni/font/blob/main/Array-Regular.ttf) format("woff2")}
 
 @keyframes changeFont {
     0% {
@@ -99,7 +99,7 @@ body {
 .navbar a {
     display: inline-block;
     font-family: 'Array';
-    font-size: 15px;
+    font-size: 20px;
     color: white;
     padding: 14px 20px;
     text-decoration: none;
