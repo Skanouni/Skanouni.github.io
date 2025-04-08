@@ -13,7 +13,19 @@ scrollbar-width: thin;
 scrollbar-color: black black; /* pour Firefox */
 }
   
+.image-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    margin-top: 50px;
+}
 
+.image-container img {
+    max-width: 40vw; /* 40% de la largeur de la fenêtre */
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optionnel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionnel */
+}
 
   .navbar {
   overflow: hidden;
