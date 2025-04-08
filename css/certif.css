@@ -68,3 +68,9 @@ scrollbar-color: black black; /* pour Firefox */
   .section:nth-child(even) {
     background-color: #000000;
   }
+
+
+  p{
+    max-width:55%;
+    max-height:50%;
+  }
