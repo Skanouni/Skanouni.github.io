@@ -1,3 +1,5 @@
+@font-face{font-display:swap;font-family:Array;font-weight:100;src:url(../fonts/Array-Regular.ttf) format("woff2")}
+
 /* Styles de la page de chargement */
 * {
     margin: 0;
@@ -11,7 +13,7 @@ body, html {
     justify-content: center;
     align-items: center;
     background-color: #000000;
-    font-family: Arial, sans-serif;
+    font-family: Array;
 }
 
 .loader-container {
