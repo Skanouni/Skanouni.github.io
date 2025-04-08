@@ -23,7 +23,6 @@ body {
     z-index: 1000;
     display: flex;
     justify-content: center;  /* Centre horizontalement les éléments */
-    left: 2rem;
 }
 
 .navbar a {
