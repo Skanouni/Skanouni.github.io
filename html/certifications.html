@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/indexcertif.css">
+    <style>.fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      
+      .fade-in-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }</style>
+    <title>EF3</title>
+</head>
+
+<body>
+
+  <div class="navbar fade-in-up">
+    <a href="">Index</a>
+    <a href="">Portfolio</a>
+    <a href="">Veille</a>
+    <a href="">EF3</a>
+  </div>
+
+  <div class="container">
+    <div class="card fade-in-up" style="--clr: #ffffff0c;">
+      <a href="certifSQL.html">
+        <img src="../images/7597947_78194241732567664714_page-0001.jpg" alt="">
+        <div class="overlay">
+          <h2>SQL</h2>
+        </div>
+      </a>
+    </div>
+    <div class="card fade-in-up" style="--clr: #ffffff0c;">
+      <a href="certifCloud.html">
+        <img src="../images/Certif Cloud Computing.png" alt="">
+        <div class="overlay">
+          <h2>Cloud</h2>
+        </div>
+      </a>
+    </div>
+    <div class="card fade-in-up" style="--clr: #ffffff0c;">
+      <a href="certifANSSI.html">
+        <img src="../images/CERTIF_ANSSI_page-0001.jpg" alt="">
+        <div class="overlay">
+          <h2>ANSSI</h2>
+        </div>
+      </a>
+    </div>
+    <div class="card fade-in-up" style="--clr: #ffffff0c;">
+      <a href="certifIA.html">
+        <img src="../images/" alt="">
+        <div class="overlay">
+          <h2>IA</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Déplacement souris sur les cartes
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--x', x + 'px');
+        card.style.setProperty('--y', y + 'px');
+      });
+    });
+
+    // Apparition progressive des éléments
+    window.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in-up');
+      elements.forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.add('visible');
+        }, i * 150); // décalage en cascade
+      });
+    });
+  </script>
+
+</body>
+</html>

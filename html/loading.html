@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Chargement</title>
+    <link rel="stylesheet" href="../css/loading.css">
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader-text">0%</div>
+    </div>
+
+    <script>
+        window.addEventListener("load", function() {
+            let loaderText = document.querySelector('.loader-text');
+            let progress = 0;
+
+            let interval = setInterval(function() {
+                if (progress < 100) {
+                    progress++;
+                    loaderText.textContent = progress + '%';
+                } else {
+                    clearInterval(interval);
+                    // Après l'animation, vous pouvez rediriger ou afficher le contenu de la page
+                    window.location.href = "certifications.html"; // Remplacez par l'URL de votre page principale
+                }
+            }, 0.5); // La vitesse de l'animation (30ms pour chaque incrément)
+        });
+    </script>
+</body>
+</html>
