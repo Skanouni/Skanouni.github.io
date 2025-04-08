@@ -73,3 +73,61 @@ scrollbar-color: black black; /* pour Firefox */
     max-width:55%;
     max-height:50%;
   }
+
+
+/* Media Queries pour les appareils plus petits */
+@media (max-width: 1024px) {
+    .image-container img {
+        max-width: 50vw; /* Réduit la taille de l'image à 50% sur les tablettes */
+    }
+
+    .navbar a {
+        font-size: 18px; /* Réduit la taille de la police de la navbar */
+        padding: 12px 18px; /* Réduit le padding des éléments de la navbar */
+    }
+
+    .section {
+        font-size: 1.2rem; /* Réduit la taille de la police pour les tablettes */
+    }
+
+    p {
+        max-width: 70%; /* Augmente la largeur du texte */
+        font-size: 1.2rem; /* Réduit légèrement la taille de la police */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container img {
+        max-width: 60vw; /* Réduit encore la taille de l'image sur les appareils mobiles */
+    }
+
+    .navbar a {
+        font-size: 16px; /* Réduit la taille de la police pour les mobiles */
+        padding: 10px 15px; /* Réduit le padding des éléments de la navbar */
+    }
+
+    .section {
+        font-size: 1rem; /* Réduit davantage la taille de la police pour les petits écrans */
+    }
+
+    p {
+        max-width: 80%; /* Augmente encore la largeur du texte */
+        font-size: 1.1rem; /* Ajuste la taille de la police */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 14px; /* Taille de police encore plus petite pour les très petits écrans */
+        padding: 8px 12px; /* Moins de padding pour les très petits écrans */
+    }
+
+    .section {
+        font-size: 1rem; /* Garde une taille de police raisonnable */
+    }
+
+    p {
+        max-width: 90%; /* Le texte peut occuper presque toute la largeur de l'écran */
+        font-size: 1rem; /* Taille de police encore plus petite pour les petits écrans */
+    }
+}
