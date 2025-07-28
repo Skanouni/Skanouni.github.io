@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Chargement</title>
+    <title>Certifications</title>
     <link rel="stylesheet" href="../css/loading.css">
 </head>
 <body>
@@ -22,10 +22,10 @@
                     loaderText.textContent = progress + '%';
                 } else {
                     clearInterval(interval);
-                    // Après l'animation, vous pouvez rediriger ou afficher le contenu de la page
-                    window.location.href = "certifications.html"; // Remplacez par l'URL de votre page principale
+
+                    window.location.href = "certifications.html"; 
                 }
-            }, 0.5); // La vitesse de l'animation (30ms pour chaque incrément)
+            }, 0.5); // La vitesse de l'animation
         });
     </script>
 </body>
